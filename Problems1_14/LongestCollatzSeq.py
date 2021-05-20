@@ -12,14 +12,9 @@ def collatz_seq_len(n):
     return 1 + collatz_seq_len(next_term(n))
 
 def longest_collatz_end(n):
-    max_len = 0
-    end = -1
-    for i in range(1, n + 1):
-        if collatz_seq_len(i) > max_len:
-            max_len = collatz_seq_len(i)
-            end = i
-    return end
-        
-if __name__ == '__main__':
-    print(longest_collatz_end(1000000))
+    collatz_lens = [collatz_seq_len(num) for num in range(1, n + 1)]
+    return collatz_lens.index(max(collatz_lens)) + 1
+
+def problem14():
+    return longest_collatz_end(1000000)
     
