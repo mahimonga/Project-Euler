@@ -17,4 +17,3 @@ def longest_collatz_end(n):
 
 def problem14():
     return longest_collatz_end(1000000)
-    
