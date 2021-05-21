@@ -19,19 +19,19 @@ class TestLargestPalindrom(unittest.TestCase):
 
     def test_upper_limit(self):
         self.assertTrue(tools.upper_limit(self.upperLimit1), 99)
-        self.assertTrue(tools.upper_limit(self.upperLimit2), 999)
+        self.assertFalse(tools.upper_limit(self.upperLimit2), 99)
 
     def test_lower_limit(self):
         self.assertTrue(tools.lower_limit(self.lowerLimit1), 10)
-        self.assertTrue(tools.lower_limit(self.lowerLimit1), 1000)
+        self.assertFalse(tools.lower_limit(self.lowerLimit1), 100)
 
     def test_reversed_number(self):
         self.assertTrue(tools.reverse(self.reversedNumber1), 8904)
-        self.assertTrue(tools.reverse(self.reversedNumber2), 9873)
+        self.assertFalse(tools.reverse(self.reversedNumber2), 987)
 
     def test_isPalindrome_number(self):
         self.assertTrue(tools.isPalindrome(self.palindrome1), True)
-        self.assertTrue(tools.isPalindrome(self.palindrome2), True)
+        self.assertFalse(tools.isPalindrome(self.palindrome2), False)
 
 
 if __name__ == '__main__':
