@@ -4,12 +4,20 @@ def even(n):
 def next_term(n):
     return n // 2 if even(n) else 3 * n + 1
 
-def collatz_seq_len(n):
+def collatz_seq_len(n, memo = {}):
+    """
+    Uses memoisation to calculate length of collatz sequence of n.
+    """
+    if n in memo:
+        return memo[n]
     if n <= 2:
+        memo[n] = n
         return n
     if n == 4:
+        memo[n] = 3
         return 3
-    return 1 + collatz_seq_len(next_term(n))
+    memo[n] = 1 + collatz_seq_len(next_term(n), memo)
+    return memo[n]
 
 def longest_collatz_end(n):
     collatz_lens = [collatz_seq_len(num) for num in range(1, n + 1)]
