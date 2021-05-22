@@ -26,7 +26,7 @@ def solve_problem12(self):
     pass
 
 def solve_problem13(self):
-    return LargeSum.largeSum('13_largeSum.txt')
+    return LargeSum.largeSum('LargeSumInput.txt')
 
 def solve_problem14(self):
     return LongestCollatzSeq.longest_collatz_end(1000000)
