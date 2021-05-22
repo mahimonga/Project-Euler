@@ -7,4 +7,5 @@ Tanisha - Problem 2(Even Fibonacci numbers) and 13(Large Sum).
 Mahi - Problem 3(Largest prime factor) and 12(Highly divisible triangular number).
 Shubhi - 4(Largest palindrome product) & 11(Largest product in a grid).
 Tushara - 5 (Smallest multiple) & 10 (summation of primes) 
+Tanmayee - 20 (Factorial Digit Sum) & 30(Digit Fifth Powers
 ```
