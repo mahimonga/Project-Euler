@@ -31,13 +31,25 @@
     Returns the sum of all numbers in `seq`
 
 ## Problem 2: Even Fibonacci Numbers
-1. `fibonacci_seq(n, until = True, length = False)`
+1. `generate_seq(n, until = True, length = False, seq_type = "natural_no")`
 
-    Returns the fibonacci sequence of length `n` or until the value `n` is approached
+    Returns a sequence of type `seq_type` of length `n` or until the value `n` is approached
 
-    until (*default* : `True`): If true returns Fibonacci sequence until the no. `n` is reached.
+    until (*default* : `True`): If true returns sequence until the no. `n` is reached.
 
-    length (*default* : `False`): If true returns first `n` Fibonacci numbers.
+    length (*default* : `False`): If true returns first `n` numbers in the seq.
+
+    seq_type (*default* : `"natural_no"`): Defines the type of the sequence required. Takes values:
+    
+    - "fibonacci"
+    - "natural_no"
+    - "triangular"
+    - "collatz"
+    - "prime"
+    - "even"
+    - "palindrome"
+    - "odd"
+
 
     If both until and length are `False`, first `n` Fibonacci numbers are returned.
 
@@ -61,9 +73,19 @@
     Returns true if `n` is even.
 
 ## Problem 3: Largest Prime Factor
-1. `factors(n, proper = True)`
+1. `factors(nums, proper = True, separate = True, union = False, intersection = False)`
 
-    Returns the factors of an integer `n`.
+    Returns the factors of all numbers in `nums`.
+
+    union (*default* : `True`): If true, returns list of all factors of any of numbers in `nums`.
+
+    intersection (*default* : `False`): If true, returns list of factors of all of numbers in `nums`.
+
+    If both `intersection` and `union` are simultaneously:
+
+    a. `False`, then list of list of all factor of each no. in `nums` is returned
+
+    b. `True`, then throws an exception.
 
     proper (*default* : True): If true, returns all proper factors (all factors including 1 and `n`) of `n` else return improper factors.
 
@@ -105,17 +127,7 @@
     Returns the list of all numbers in the `seq` raised to the power `power`
 
 ## Problem 7: 10001th Prime
-1. `prime_seq(n, until = False, length = True)`
-    
-    Returns a seq of the first `n` prime numbers if `length` is `True` 
-    
-    Else if `until` is `True`, it returns a seq of prime numbers until the value approaches `n`
-
-    If both `until` and `length` are `True`, then an exception is thrown.
-
-    If both `until` and `length` are `True`, then the first `n` primes are returned.
-
-2. `nth_number(n, num_type = "natural", custom_type = None)`
+1. `nth_number(n, num_type = "natural", custom_type = None)`
 
     Returns the `n`th `num_type` number
 
@@ -126,12 +138,42 @@
 ## Problem 10: Summation of Primes
 Uses the functions documented above
 
-## Problem 11: 
+## Problem 11: Largest product in a grid
+1. `columns(grid)`
+    
+    Returns the columns of a grid.
 
-## Problem 12:
+2. `rows(grid)`
 
-## Problem 13: 
+    Returns the rows of a grid.
 
-## Problem 14:
+3. `diagonals(grid)`
 
+    Returns the elements along slants of a grid.
+
+## Problem 12: Highly divisible triangular number
+1. `no_of_factors_seq(seq)`
+
+    Returns the list of no. of factors of each value in a sequence.
+
+## Problem 13: Large sum
+1. `first_n_digits(num, n)`
+
+    Returns the list of the first `n` digits of a number `num`
+
+## Problem 14: Longest Collatz sequence
+1. `size_seq(limits, type = "natural_nos")`
+    
+    Returns a list of sizes of all sequences having their limit in `limits`.
+
+    type (*default* : "natural_nos"): Defines type of a seq. Can take the values:
+
+    - "fibonacci"
+    - "natural_no"
+    - "triangular"
+    - "collatz"
+    - "prime"
+    - "even"
+    - "palindrome"
+    - "odd"
 
