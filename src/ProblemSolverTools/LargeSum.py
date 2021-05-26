@@ -9,9 +9,3 @@ def largeSum(filename):
 	numbersArray = toNumbersArray(filename)
 	sumOfNumbers = sum(numbersArray)
 	return str(sumOfNumbers)[:10]
-
-def problem13():
-	return largeSum('13_largeSum.txt')
-
-print(problem13())
-
